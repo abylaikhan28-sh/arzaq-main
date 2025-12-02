@@ -49,3 +49,9 @@ class Token(BaseModel):
 
 class TokenData(BaseModel):
     user_id: Optional[int] = None
+
+
+# Schema for Google OAuth
+class GoogleAuthRequest(BaseModel):
+    token: str  # Google access token
+    role: UserRole = UserRole.CLIENT  # Only for registration
